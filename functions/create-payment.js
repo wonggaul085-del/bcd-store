@@ -38,6 +38,7 @@ export async function onRequest(context) {
         email: customerEmail || 'pelanggan@bcdstore.com',
         phone: phoneTarget
       },
+      enabled_payments: ['gopay'],
       callbacks: {
         finish: 'https://bcd-store.pages.dev/?payment=success',
         error: 'https://bcd-store.pages.dev/?payment=error',
